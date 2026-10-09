@@ -1,0 +1,7 @@
+# Allow-list: every top-level entry is ignored unless named here, so a new sub-project never needs an entry.
+/*
+!/.gitignore
+!/README.md
+!/CLAUDE.md
+!/AGENTS.md
+!/scripts/
