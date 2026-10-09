@@ -19,7 +19,7 @@ Expect about five sub-projects. Keep workspace tooling proportionate to that: no
 
 Start inside a sub-project when the work stays in it, so its own instructions and git context apply. Start here only for work that spans sub-projects, and read each sub-project's `CLAUDE.md` before changing files in it.
 
-HyperFrames skills and their lock belong only to [explainery-core](explainery-core/README.md#shared-authoring-skills), with `.claude/skills -> ../.agents/skills` inside core. Do not add skill copies or symlinks to stories. Start Claude Code in a story with `claude --add-dir ../explainery-core`; Codex must read the shared entry and domain skills through the links in the story's instructions.
+HyperFrames skills and their lock belong only to [explainery-core](explainery-core/README.md#shared-authoring-skills), with `.claude/skills -> ../.agents/skills` inside core. Each story tracks one relative link, `.claude/skills -> ../../explainery-core/.agents/skills`, and no skill copies or lock files; give a new story that link. Claude Code started in a story loads the skills through it, without `--add-dir`. A session started here at the workspace root does not see them. Codex must read the shared entry and domain skills through the links in the story's instructions.
 
 ## Git across repositories
 

@@ -58,6 +58,7 @@ This lists, for each repository, uncommitted changes, unpushed commits, a branch
 
 ```bash
 mkdir my-story && cd my-story && git init        # then build and commit it
+mkdir .claude && ln -s ../../explainery-core/.agents/skills .claude/skills
 gh repo create mbackschat/my-story --private --source . --push
 gh repo edit --add-topic explainery
 ```
@@ -68,7 +69,7 @@ Other computers get the new story on their next `scripts/sync.sh`. Each story's 
 
 Start an agent session inside the repository you are changing, so its own `CLAUDE.md` applies. Start it here, in the workspace, only for work that spans repositories, such as a framework change that the stories must adopt. [CLAUDE.md](CLAUDE.md) has the rules for that.
 
-HyperFrames skills are shared from [explainery-core](explainery-core/README.md#shared-authoring-skills), with one canonical `.agents/skills` directory and a `.claude/skills` symlink there. Film repositories contain no skill copies or links. From a film repository, launch Claude Code with `claude --add-dir ../explainery-core`; Codex follows the explicit shared skill paths in that film's instructions.
+HyperFrames skills are shared from [explainery-core](explainery-core/README.md#shared-authoring-skills), with one canonical `.agents/skills` directory and a `.claude/skills` symlink there. Each film repository holds one relative link to them, `.claude/skills -> ../../explainery-core/.agents/skills`, and no copies, so Claude Code started in a film repository loads them without extra flags; Codex follows the explicit shared skill paths in that film's instructions.
 
 ## Tests
 
