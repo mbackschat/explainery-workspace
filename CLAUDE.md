@@ -2,18 +2,14 @@
 
 This folder is the Explainery workspace: a thin repository whose sub-projects are the sibling folders, each its own git repository with its own `CLAUDE.md`. `explainery-core` is the public, open-source framework; the other sub-projects are stories that consume it as `link:../explainery-core`. The [README](README.md) explains membership (the GitHub topic `explainery`) and `scripts/sync.sh`.
 
-## Modular scene authoring
+## Start with the task
 
-Author one editorial scene at a time, following the [scene authoring guide](explainery-core/docs/authoring.md#author-one-scene-at-a-time). Start the work inside its story repository and read that repository's instructions.
+Read the target repository's instructions before changing it; read both when work crosses repositories.
 
-- Select the scene with `focus` and keep edits, preview, and draft render scoped to it.
-- Build it from self-contained composition HTML files with local beats and timelines; share assets and themes explicitly.
-- Add new compositions to the story and the film root, then update timing and assemble the existing hosts.
-- Verify the scene in isolation, its joins with adjacent scenes, and its integration in the full film. Validation and assembly remain film-wide.
-
-## Research and editorial review
-
-Follow the shared [research and proposal guidance](explainery-core/docs/authoring.md#research-and-review-a-film-proposal). Collect scene content before implementation, preserve sources and editorial rationale in the story repository, and keep the research resumable after context compaction. A film proposal must be reviewable without the conversation: trace material claims and visual relationships to evidence, distinguish established facts from plans and editorial choices, and record open questions. When external review is requested, prepare the film proposal, scene briefs and a source-linked review brief; do not imply that review has happened until findings are received.
+- **Framework or player:** use core's [implementation and guard map](explainery-core/CLAUDE.md#find-the-implementation-and-its-guard). Scene focus and composition skills are unnecessary unless authored scenes also change.
+- **Scene or narration:** start in the story repository and follow the shared [scene workflow](explainery-core/CLAUDE.md#editorial-scenes-and-session-focus), one editorial scene at a time.
+- **Research or proposal:** follow the [research and review guidance](explainery-core/docs/authoring.md#research-and-review-a-film-proposal); retain evidence and editorial decisions in the story repository. Preparing an external review is not receiving one.
+- **Documentation or workspace tooling:** read the relevant owning files and linked contracts; do not run scene setup or renders unless the change requires them.
 
 ## Scale
 
@@ -35,4 +31,4 @@ HyperFrames skills and their lock belong only to [explainery-core](explainery-co
 
 ## Commits
 
-Follow Conventional Commits. Commit without asking after each completed feature once its tests pass. Do not push without authorization.
+Follow the shared [commit policy](explainery-core/CLAUDE.md#commit--pull-request-guidelines), including the global `F:` / `Fix:` exception for grouping small fixes. Do not push without authorization.

@@ -13,7 +13,7 @@ This repository, the workspace, contains only what ties them together: these ins
 
 Build each editorial scene from self-contained composition HTML files, refine it in isolation, then review how it joins its neighbors in the film. The film root combines these modules using the story's copy and timing. Follow the [modular scene authoring workflow](explainery-core/docs/authoring.md#author-one-scene-at-a-time) for the full process, including how to add a composition and wire it into the root.
 
-From the story repository, use `pnpm scenes` to find the scene and `pnpm focus --scene <id>` to select it. Iterate with `pnpm dev` and `pnpm render:draft`. Review adjacent scenes together and preview the full film before calling the integration complete; validation and assembly always cover the whole project. [CLAUDE.md](CLAUDE.md#modular-scene-authoring) makes this the agent workflow too.
+From the story repository, use `pnpm scenes` to find the scene and `pnpm focus --scene <id>` to select it. Iterate with `pnpm dev` and `pnpm render:draft`. Review adjacent scenes together and preview the full film before calling the integration complete; validation and assembly always cover the whole project. [CLAUDE.md](CLAUDE.md#start-with-the-task) makes this the agent workflow too.
 
 ## Find scene documentation
 
