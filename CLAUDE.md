@@ -11,6 +11,10 @@ Author one editorial scene at a time, following the [scene authoring guide](expl
 - Add new compositions to the story and the film root, then update timing and assemble the existing hosts.
 - Verify the scene in isolation, its joins with adjacent scenes, and its integration in the full film. Validation and assembly remain film-wide.
 
+## Research and editorial review
+
+Follow the shared [research and proposal guidance](explainery-core/docs/authoring.md#research-and-review-a-film-proposal). Collect scene content before implementation, preserve sources and editorial rationale in the story repository, and keep the research resumable after context compaction. A film proposal must be reviewable without the conversation: trace material claims and visual relationships to evidence, distinguish established facts from plans and editorial choices, and record open questions. When external review is requested, prepare the film proposal, scene briefs and a source-linked review brief; do not imply that review has happened until findings are received.
+
 ## Scale
 
 Expect about five sub-projects. Keep workspace tooling proportionate to that: no hooks or anything else that runs automatically, no fetching outside an explicit sync, and no stress tests, benchmarks, or adversarial probes.
