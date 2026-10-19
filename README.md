@@ -54,6 +54,14 @@ scripts/sync.sh check
 
 This lists, for each repository, uncommitted changes, unpushed commits, a branch without upstream, and a repository that lacks the topic. It is cheap: one call to GitHub and one `git status` per repository. It does not download anything, so run `git pull` in a repository before working in it on another computer.
 
+## After a framework change
+
+```bash
+scripts/check-stories.sh
+```
+
+A new framework check can fail a story that nobody is working on. This runs `pnpm validate`, when the story defines it, and `pnpm test` in every story that links `explainery-core`, prints one line per story and exits non-zero if any failed. It runs only when started and takes a few minutes; open the failing story and run its checks there for the details.
+
 ## Start a new story
 
 ```bash
@@ -74,7 +82,7 @@ HyperFrames skills are shared from [explainery-core](explainery-core/README.md#s
 ## Tests
 
 ```bash
-node --test scripts/sync.test.ts
+node --test scripts/*.test.ts
 ```
 
-The tests run the script against a few local repositories with stand-ins for `gh` and `pnpm`, so they need neither network nor a GitHub login.
+The tests run the scripts against a few local folders and repositories with stand-ins for `gh` and `pnpm`, so they need neither network nor a GitHub login.
